@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RK Cafe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      padding: 12px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #34495e;
+      border-radius: 6px;
+    }
+
+    /* Dropdown */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #34495e;
+      min-width: 160px;
+      border-radius: 6px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3d566e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=60');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #f8f8f8;
+    }
+
+    .hero button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      border: none;
+      background-color: #27ae60;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #219150;
+    }
+
+    /* Products */
+    .products {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .products h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card p {
+      padding: 0 10px 20px;
+      color: #555;
+    }
+
+    /* About Section */
+    .about {
+      background-color: #ecf0f1;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 30px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #2c3e50;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#" class="logo">RK Cafe</a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="dropdown">
+        <a href="#">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Tea</a>
+          <a href="#">Coffee</a>
+          <a href="#">Snacks</a>
+          <a href="#">Cool Drinks</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to RK Cafe</h1>
+    <p>Freshly brewed happiness in every cup ☕</p>
+    <button>Explore Our Menu</button>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Our Specialties</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=60" alt="Tea">
+        <h3>Premium Tea</h3>
+        <p>Experience the finest blends from Darjeeling and Assam.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=60" alt="Coffee">
+        <h3>Fresh Coffee</h3>
+        <p>Rich aroma and flavor from freshly roasted beans.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565958011705-44e211edc26f?auto=format&fit=crop&w=600&q=60" alt="Snacks">
+        <h3>Tasty Snacks</h3>
+        <p>Perfect companions for your tea or coffee breaks.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c8d?auto=format&fit=crop&w=600&q=60" alt="Cool Drinks">
+        <h3>Cool Drinks</h3>
+        <p>Refreshing beverages to keep you energized all day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about">
+    <h2>About RK Cafe</h2>
+    <p>RK Cafe is a cozy spot where passion meets perfection. Our mission is to bring you the best café experience with premium quality drinks, freshly made snacks, and a welcoming atmosphere. Whether you're here to relax, work, or meet friends — RK Cafe is the perfect place for you.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@rkcafe.com | Phone: +91 98765 43210</p>
+    <p>Address: RK Cafe, Anna Nagar, Chennai, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 RK Cafe | All Rights Reserved | Designed by Jegan
+  </footer>
+
+</body>
+</html>

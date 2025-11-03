@@ -1,0 +1,30 @@
+<html>
+    <body class="bg-light">
+        <div class="container mt-5 text-center">
+            <h2>AutoModal</h2>
+            <div class="modal fade" id="WelcomeModal" tabindex="-1" aria-labelledby="WelcomeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="WelcomeModalLabel">Welcome!</h5>
+                            <button type="button" class="btn-class" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            refresh the page
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src=""></script>
+        <script>
+            window.addEventListener('load',function(){
+                var mymodal=new bootstrap.Modal(document.getElementById('welcome Modal'));
+                mymodal.show();
+            });
+        </script>
+    </body>
+</html>
